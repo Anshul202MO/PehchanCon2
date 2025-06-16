@@ -11,7 +11,7 @@ if uploaded_file:
     st.video(uploaded_file)
     st.info("Transcribing and scanning for scam words...")
 
-    transcript = transcribe_audio(uploaded_file)
+    transcript = transcribe_audio(tmp_path) 
     keywords, timestamps = detect_keywords(transcript)
 
     st.subheader("📝 Transcript:")
